@@ -39,9 +39,10 @@ public class SecondActivity extends AppCompatActivity {
 
     public void setLower(View view) {
         String text = textView.getText().toString();
-        textView.setText(text.toLowerCase(Locale.ROOT));
+        String lowerCase = text.toLowerCase();
+        textView.setText(lowerCase);
         Intent intent = new Intent();
-        intent.putExtra(MainActivity.EXTRA_DATA, text);
+        intent.putExtra(MainActivity.EXTRA_DATA, lowerCase);
         setResult(RESULT_OK, intent);
         finish();
     }
